@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/mediego-recommendations",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Grâce à son algorithme de similarité entre utilisateurs, Mediego assure la pertinence de vos recommandations.",
+    "authors": [
+    {
+        "name": "Orinoko",
+        "email": "mediego-support@orinoko.fr"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Mediego
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mediego
+ * @package    Mediego_Recommendations
+ * @author     Orinoko <contact@orinoko.fr>
+ * @copyright  Copyright (c) 2014-2015 Mediego (http://mediego.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<widgets>
+    <mediego_recommendations_widget type="mediego_recommendations/widget" translate="name description" module="mediego_recommendations">
+        <name>Mediego Recommendations</name>
+        <description>Displays Mediego recommendations</description>
+        <parameters>
+            <layout translate="label description" module="mediego_recommendations">
+                <label>Layout</label>
+                <description>You must have enough default recommendations in the Catalog &gt; Mediego menu, otherwise no recommendation will be suggested at all.</description>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <value>3x</value>
+                <values>
+                    <h1 translate="label">
+                        <value>1x</value>
+                        <label>Horizontal - 1 recommendation</label>
+                    </h1>
+                    <h3 translate="label">
+                        <value>3x</value>
+                        <label>Horizontal - 3 recommendations</label>
+                    </h3>
+                    <h4 translate="label">
+                        <value>4x</value>
+                        <label>Horizontal - 4 recommendations</label>
+                    </h4>
+                    <h6 translate="label">
+                        <value>6x</value>
+                        <label>Horizontal - 6 recommendations</label>
+                    </h6>
+                    <h8 translate="label">
+                        <value>8x</value>
+                        <label>Horizontal - 8 recommendations</label>
+                    </h8>
+                    <v1 translate="label">
+                        <value>x1</value>
+                        <label>Vertical - 1 recommendation</label>
+                    </v1>
+                    <v3 translate="label">
+                        <value>x3</value>
+                        <label>Vertical - 3 recommendations</label>
+                    </v3>
+                </values>
+            </layout>
+            <custom_title translate="label" module="mediego_recommendations">
+                <label>Custom Title</label>
+                <visible>1</visible>
+                <type>text</type>
+            </custom_title>
+            <display_price translate="label" module="mediego_recommendations">
+                <label>Display price</label>
+                <visible>1</visible>
+                <type>select</type>
+                <value>false</value>
+                <values>
+                    <no translate="label">
+                        <value>false</value>
+                        <label>No</label>
+                    </no>
+                    <yes translate="label">
+                        <value>true</value>
+                        <label>Yes</label>
+                    </yes>
+                </values>
+            </display_price>
+            <module_key translate="label description" module="mediego_recommendations">
+                <label>Module Key (advanced)</label>
+                <description>The identifier used to differenciate multiple widgets in the same page.</description>
+                <visible>1</visible>
+                <type>text</type>
+            </module_key>
+        </parameters>
+    </mediego_recommendations_widget>
+</widgets>

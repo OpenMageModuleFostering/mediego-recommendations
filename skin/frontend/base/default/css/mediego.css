@@ -1,0 +1,36 @@
+/**
+ * Mediego
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mediego
+ * @package    Mediego_Recommendations
+ * @author     Orinoko <contact@orinoko.fr>
+ * @copyright  Copyright (c) 2014-2015 Mediego (http://mediego.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+.widget-mediego {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.col-main .widget-mediego { margin:7px 0; }
+.widget-mediego .products-grid .product-image,
+.widget-mediego .products-list .product-image { width:135px; height:135px; }
+.widget-mediego .products-list .product-shop { margin-left:100px; }
+.widget-mediego .products-grid .item { padding-bottom:12px; }
+.widget-mediego .product-info > a { text-decoration: none; } 
+.widget-mediego .product-info > a > h2 { text-decoration: underline;  } 
+.widget-mediego .product-info > a > h2:hover { text-decoration: none;  } 
+.sidebar .widget-mediego .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-mediego .block-title strong { color:#dc5033; }
+
+
+.widget-mediego .item { list-style-type: none; }

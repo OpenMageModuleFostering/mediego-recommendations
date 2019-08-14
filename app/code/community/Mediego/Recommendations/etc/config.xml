@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+/**
+ * Mediego
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mediego
+ * @package    Mediego_Recommendations
+ * @author     Orinoko <contact@orinoko.fr>
+ * @copyright  Copyright (c) 2014-2015 Mediego (http://mediego.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Mediego_Recommendations>
+            <version>1.0.0</version>
+        </Mediego_Recommendations>
+    </modules>
+    <global>
+        <models>
+            <mediego_recommendations>
+                <class>Mediego_Recommendations_Model</class>
+                <resourceModel>mediego_recommendations_resource</resourceModel>
+            </mediego_recommendations>
+            <mediego_recommendations_resource>
+                <class>Mediego_Recommendations_Model_Resource</class>
+                <entities>
+                    <default_recommendations>
+                        <table>mediego_recommendations_default_recommendations</table>
+                    </default_recommendations>
+                </entities>
+            </mediego_recommendations_resource>
+        </models>
+        <resources>
+            <mediego_recommendations_setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+                <setup>
+                    <module>Mediego_Recommendations</module>
+                </setup>
+            </mediego_recommendations_setup>
+        </resources>
+        <blocks>
+            <mediego_recommendations>
+                <class>Mediego_Recommendations_Block</class>
+            </mediego_recommendations>
+        </blocks>
+        <helpers>
+            <mediego_recommendations>
+                <class>Mediego_Recommendations_Helper</class>
+            </mediego_recommendations>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <mediego_recommendations>
+                    <file>mediegorecommendations.xml</file>
+                </mediego_recommendations>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <mediego_recommendations>
+                    <files>
+                        <default>Mediego_Recommendations.csv</default>
+                    </files>
+                </mediego_recommendations>
+            </modules>
+        </translate>
+    </frontend>
+    <admin>
+        <routers>
+            <mediego_recommendations>
+                <use>admin</use>
+                <args>
+                    <module>Mediego_Recommendations</module>
+                    <frontName>mediego_recommendations</frontName>
+                </args>
+            </mediego_recommendations>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <mediego_recommendations>
+                    <files>
+                        <default>Mediego_Recommendations.csv</default>
+                    </files>
+                </mediego_recommendations>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <mediego_recommendations>
+                    <file>mediegorecommendations.xml</file>
+                </mediego_recommendations>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <mediego_recommendations>
+            <general>
+                <enabled>1</enabled>
+                <open_graph>1</open_graph>
+            </general>
+        </mediego_recommendations>
+    </default>
+</config>

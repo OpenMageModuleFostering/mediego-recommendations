@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+    <name>mediego-recommendations</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Gr&#xE2;ce &#xE0; son algorithme de similarit&#xE9; entre utilisateurs, Mediego assure la pertinence de vos recommandations.</summary>
+    <description>Gr&#xE2;ce &#xE0; son algorithme de similarit&#xE9; entre utilisateurs, Mediego assure la pertinence de vos recommandations en temps r&#xE9;el et fluidifie la navigation des visiteurs sur votre site.&#xD;
+&#xD;
+Offrez une exp&#xE9;rience unique &#xE0; vos internautes.&#xD;
+&#xD;
+Issue de 4 ann&#xE9;es de recherche et d&#xE9;veloppement au sein du laboratoire Inria (Rennes), Mediego identifie les similarit&#xE9;s entre internautes pour offrir des contenus pertinents et personnalis&#xE9;s d&#xE8;s la premi&#xE8;re visite.&#xD;
+En moyenne les contenus personnalis&#xE9;s sont 150% fois plus cliqu&#xE9;s que les recommandations bas&#xE9;es sur la popularit&#xE9;.&#xD;
+&#xD;
+Configurez votre moteur de recommandation en quelques clics.&#xD;
+&#xD;
+Installez l'extension Mediego depuis Magento Connect.&#xD;
+Gr&#xE2;ce au syst&#xE8;me de widget int&#xE9;gr&#xE9; &#xE0; Magento, vous pourrez ais&#xE9;ment choisir l'emplacement de votre module de recommandations personnalis&#xE9;es.&#xD;
+Une configuration suppl&#xE9;mentaire ainsi que la cr&#xE9;ation d'un compte sur le site http://www.mediego.com sera n&#xE9;cessaire au bon fonctionnement du module.&#xD;
+Pour plus d'informations sur l'installation et la configuration de l'extension Mediego, veuillez consulter la documentation, ou contacter le support.</description>
+    <notes>Version initiale</notes>
+    <authors><author><name>Orinoko</name><user>orinoko</user><email>mediego-support@orinoko.fr</email></author></authors>
+    <date>2015-09-09</date>
+    <time>14:54:46</time>
+    <contents><target name="magecommunity"><dir name="Mediego"><dir name="Recommendations"><dir name="Block"><dir name="Adminhtml"><dir name="Default"><dir name="Recommendations"><dir name="Edit"><file name="Form.php" hash="0aa1e945924691a374add3c1d69450d1"/></dir><file name="Edit.php" hash="56b05309fc9cd441bfa2b7735271bee9"/><dir name="Grid"><file name="Container.php" hash="ad371bfaeca9ad2e8633b18c530df100"/></dir><file name="Grid.php" hash="eec0447cbd397a1d207250bdd4d3bd1d"/></dir></dir></dir><file name="Js.php" hash="2367fd6fd4817207bda2186593b32974"/><file name="Widget.php" hash="b1572ab1449a4ba3a19b954d646fb990"/></dir><dir name="Helper"><file name="Chooser.php" hash="07971c470ee62085c2cdc59c65c3c266"/><file name="Data.php" hash="190d4ad025e34fec68c76d5326c220da"/></dir><dir name="Model"><dir name="Collection"><file name="Memory.php" hash="f590c03359f1f0e0867cdbb623e08861"/></dir><dir name="Default"><file name="Recommendations.php" hash="6671393288e6124a374c306080c465d2"/></dir><dir name="Resource"><dir name="Default"><dir name="Recommendations"><file name="Collection.php" hash="a999a2302cdfee2fa324a9a04fe1d911"/></dir><file name="Recommendations.php" hash="eb34654d19b5974c045f681a9ec45f49"/></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="IndexController.php" hash="a749d0ae84f6c0bb5280a6d3157eb8b1"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="69905157d496c82b4d975c88dfe553a4"/><file name="compilation.xml" hash="65799ccd970704535384a031b4c404e3"/><file name="config.xml" hash="ba5f4a253a821e336f00cba83b663dc5"/><file name="system.xml" hash="61ac46a7c68c07054f6c48caba4e7f3c"/><file name="widget.xml" hash="7d965ab65487f1c403e4c8c1f33fc7a8"/></dir><dir name="sql"><dir name="mediego_recommendations_setup"><file name="install-0.1.0.php" hash="f27b91ac14fc1f7e89b76f99920731d8"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="mediegorecommendations.xml" hash="ead8503e2c23e766d7fde355a8212172"/></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="mediegorecommendations.xml" hash="3487d583bb88928fa9116cc37538bb8b"/></dir><dir name="template"><dir name="mediegorecommendations"><file name="js.phtml" hash="8c9c2b0c9c999c50be6a5d9faed3ba71"/><file name="opengraph.phtml" hash="ecd8f30db9f745461fc4f8cf9f438e45"/><file name="recommendations.phtml" hash="054c22d0e78b7f5c2f038697e2446ebc"/></dir></dir></dir></dir><dir name="rwd"><dir name="default"><dir name="template"><dir name="mediegorecommendations"><file name="recommendations.phtml" hash="656c60b4b07f02722ad28b955c161e98"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mediego_Recommendations.xml" hash="9cf968757c07148be11920162ef52941"/></dir></target><target name="magelocale"><dir name="fr_FR"><file name="Mediego_Recommendations.csv" hash="bbdc69e39725e6f3676c5858aca6e12b"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><file name="mediego.png" hash="4045dfc753ebe6d3d2f2fa7fc52879b0"/><dir name="widget"><file name="mediego_recommendations__widget.gif" hash="aaf11e748d1be1ba4772e3d6eafbc595"/></dir></dir><file name="mediego_recommendations.css" hash="72890e33da89f826b13a68fb163b22a4"/></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="mediego.css" hash="9a3f509c75c573ef92912e362957df69"/></dir></dir></dir><dir name="rwd"><dir name="default"><dir name="css"><file name="mediego.css" hash="c6da043c418b4024805bd50f5f46005d"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.4.0</min><max>5.6.13</max></php></required></dependencies>
+</package>

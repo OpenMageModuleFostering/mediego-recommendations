@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mediego
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mediego
+ * @package    Mediego_Recommendations
+ * @author     Orinoko <contact@orinoko.fr>
+ * @copyright  Copyright (c) 2014-2015 Mediego (http://mediego.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <mediego_recommendations>
+                    <title>Mediego</title>
+                    <sort_order>200</sort_order>
+                    <action>mediego_recommendations/adminhtml_index</action>
+                </mediego_recommendations>
+            </children>
+        </catalog>
+    </menu>
+
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <mediego_recommendations>
+                                <title>Mediego</title>
+                            </mediego_recommendations>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mediego_recommendations>
+                                        <title>Mediego</title>
+                                    </mediego_recommendations>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

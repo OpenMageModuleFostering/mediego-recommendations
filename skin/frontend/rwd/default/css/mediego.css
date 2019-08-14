@@ -1,0 +1,57 @@
+/**
+ * Mediego
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mediego
+ * @package    Mediego_Recommendations
+ * @author     Orinoko <contact@orinoko.fr>
+ * @copyright  Copyright (c) 2014-2015 Mediego (http://mediego.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+.widget-mediego {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.widget-mediego .product-image {
+    margin: 15px auto 5px auto;
+    max-width: 210px;
+    max-height: 210px;
+}
+
+.widget-mediego .item { list-style-type: none; }
+.widget-mediego .item .product-info { padding-bottom:0px; }
+.widget-mediego .item .product-info > a { text-decoration : none; }
+
+.widget-mediego.horizontal .products-grid.products-grid--max-1-col-widget .item {
+    float:none;
+    margin: 0 auto;
+}
+
+.widget-mediego.vertical { margin-top:0px; }
+.widget-mediego.vertical .block-title { text-align: start; }
+.widget-mediego.vertical .product-image { margin: 15px auto 5px auto; }
+
+/** Fix for 4 column grid */
+.widget-mediego .products-grid--max-4-col-widget > li {
+    width: 23.33333%;
+    margin-right: 2.22222%;
+}
+.widget-mediego .products-grid--max-4-col-widget > li:nth-child(odd) { clear: none; }
+.widget-mediego .products-grid--max-4-col-widget > li:nth-child(3n+1) { clear: none; }
+.widget-mediego .products-grid--max-4-col-widget > li:nth-child(even),
+.widget-mediego .products-grid--max-4-col-widget > li:nth-child(3n) {
+    margin-right: 2.22222%;
+}
+.widget-mediego .products-grid--max-4-col-widget > li:nth-child(4n+1) { clear: left; }
+.widget-mediego .products-grid--max-4-col-widget > li:nth-child(4n) {
+    margin-right: 0;
+}

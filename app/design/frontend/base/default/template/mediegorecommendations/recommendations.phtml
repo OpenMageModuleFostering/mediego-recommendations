@@ -1,0 +1,74 @@
+<?php
+/**
+ * Mediego
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mediego
+ * @package    Mediego_Recommendations
+ * @author     Orinoko <contact@orinoko.fr>
+ * @copyright  Copyright (c) 2014-2015 Mediego (http://mediego.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+    $_layoutOrientation = $this->getLayoutOrientation();
+    $_layoutProductCount = $this->getLayoutProductCount();
+    $_displayPrice = $this->getDisplayPrice();
+    $_gridSize = $this->getGridSize();
+    $_storeCcySymbol = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
+    $_productBlock = $this->getLayout()->createBlock('catalog/product_price');
+    $_safeTitle = $this->hasCustomTitle() ? $this->escapeHtml($this->getCustomTitle()) : $this->__('Recommended Products');
+    $_moduleKey = $this->getModuleKey();
+    $_products = $this->getProducts();
+?>
+<?php if ($_products->getSize() && $_products->getSize() >= $_layoutProductCount): ?>
+<?php
+    $_i = 'A';
+?>
+    <div class="widget widget-mediego <?php echo $_layoutOrientation ?>">
+    <?php if ($_layoutOrientation == 'horizontal'): ?>
+        <div class="widget-title"><h2><?php echo $_safeTitle ?></h2></div>
+        <div class="widget-products">
+            <ul class="products-grid products-grid--max-<?php echo $_gridSize ?>-col-widget">
+    <?php else: ?>
+        <div class="block block-products">
+            <div class="block-title">
+                <strong><span><?php echo $_safeTitle ?></span></strong>
+            </div>
+            <div class="block-content">
+    <?php endif; ?>
+
+            <?php foreach ($_products as $_product): ?>
+                <li class="item">
+                    <a href="<?php echo $_product->getProductUrl(); ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="product-image mediego mediego.item<?php echo $_i ?>.link<?php if($_moduleKey): ?> mediego.id.<?php echo $_moduleKey; endif; ?>">
+                        <img class="mediego mediego.item<?php echo $_i ?>.image<?php if($_moduleKey): ?> mediego.id.<?php echo $_moduleKey; endif; ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" />
+                    </a>
+                    <div class="product-info">
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="mediego mediego.item<?php echo $_i ?>.link<?php if($_moduleKey): ?> mediego.id.<?php echo $_moduleKey; endif; ?>">
+                            <h2 class="mediego mediego.item<?php echo $_i ?>.title<?php if($_moduleKey): ?> mediego.id.<?php echo $_moduleKey; endif; ?> product-name"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></h2>
+                            <div class="price-box">
+                                <span class="regular-price">
+                                    <span class="price"><span class="mediego mediego.item<?php echo $_i ?>.metadata['product:price:amount']<?php if($_moduleKey): ?> mediego.id.<?php echo $_moduleKey; endif; ?>"><?php echo number_format($_product->getFinalPrice() == 0 ? $_product->getMinimalPrice() : $_product->getFinalPrice(), 2, ",", " ") ?></span> <span class="mediego mediego.item<?php echo $_i ?>.metadata['product:price:currency']<?php if($_moduleKey): ?> mediego.id.<?php echo $_moduleKey; endif; ?>"><?php echo $_storeCcySymbol ?></span></span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            <?php
+                $_i++;
+            ?>
+            <?php endforeach; ?>
+    <?php if ($_layoutOrientation == 'horizontal'): ?>
+            </ul>
+    <?php else: ?>
+            </div>
+    <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
