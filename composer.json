@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/mediego-recommendations",
+    "name": "openmage-module-fostering\/mediego-recommendations",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Gr\u00e2ce \u00e0 son algorithme de similarit\u00e9 entre utilisateurs, Mediego assure la pertinence de vos recommandations.",
     "authors": [
